@@ -10,3 +10,4 @@ ip_address=$(/sbin/ifconfig eth0 | grep 'inet addr' | cut -d: -f2 | awk '{print 
 ipa="$ip_address"
 sed -i "s/$ipa/#$ipa/g" /etc/hosts
 echo "$ipa $input_variable1.$input_variable2">> /etc/hosts
+service hostname restart
