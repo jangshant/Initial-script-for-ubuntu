@@ -1,7 +1,5 @@
 #!/bin/bash
-echo "This wil run a script to change hostname of your computer"
-echo "Enter first desired computer name followed by a domain"
-echo " For example we enter server1 as  computer name, and w3wing.com as a domain, we get server1.w3wing.com"
+echo $'This wil run a script to change hostname of your computer.\nEnter first desired computer name followed by a domain.\nFor example we enter server1 as  computer name, and w3wing.com as a domain, we get server1.w3wing.com.\n'
 echo "Please enter computer name: "
 read input_variable1
 echo "Please enter domain name: "
