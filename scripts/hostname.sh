@@ -9,4 +9,4 @@ sudo sed -i "1s/.*/$input_variable1/"  /etc/hostname
 ip_address=$(/sbin/ifconfig eth0 | grep 'inet addr' | cut -d: -f2 | awk '{print $1}')
 ipa="$ip_address"
 sudo sed -i "s/$ipa/#$ipa/g" /etc/hosts
-sudo echo "$ipa $input_variable1.$input_variable2">> /etc/hosts
+echo "$ipa $input_variable1.$input_variable2 $input_variable1" | sudo tee --append /etc/hosts
